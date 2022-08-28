@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class employee_salary {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        char grade;
+        float salary, bonus, total;
+        System.out.println("Enter the Grade of the Employee :");
+        grade = obj.next().charAt(0);
+        System.out.println("Enter the Employee Salary :");
+        salary = obj.nextInt();
+        if(salary>0){
+        System.out.println("Salary :" + salary);
+        if (grade == 'A' || grade == 'a') {
+            bonus=salary*5/100;
+            System.out.println("Bonus ="+bonus);
+            total=salary+bonus;
+            System.out.println("Total to be paid :"+total);
+        }
+        else if(grade=='B' || grade=='b')
+        {
+            bonus=salary*10/100;
+            System.out.println("Bonus ="+bonus);
+            total=salary+bonus;
+            System.out.println("Total to be paid :"+total);
+        }
+        else{
+            System.out.println("Invalid grade....");
+        }
+    }
+    else{
+        System.out.println("Invalid Input...");
+    }
+
+    }
+}
