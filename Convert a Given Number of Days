@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class daysc {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        try {
+            System.out.print("Enter total no. of days :");
+            int day = obj.nextInt();
+            if (day > 0) {
+                int year = day;
+                int rem = day % 365;
+                int week = rem / 7;
+                int days = rem % 7;
+                System.out.print("Weeks :" + week + "\n");
+                System.out.print("Days :" + days + "\n");
+            } else {
+                System.out.println("Invalid Input....");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input....");
+
+        }
+
+    }
+}
