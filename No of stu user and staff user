@@ -1,0 +1,15 @@
+import java.util.*;
+public class pattern{
+public static void main(String args[]){
+int r;
+Scanner obj=new Scanner(System.in);
+System.out.println("enter the total users: ");
+int tot=obj.nextInt();
+System.out.println("enter the staff users: ");
+int staff=obj.nextInt();
+int ns=staff/3;
+staff=staff+ns;
+int stud=tot-staff;
+System.out.println("total no of students : "+stud);
+}
+}
