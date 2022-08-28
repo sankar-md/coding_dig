@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class revnum {
+    public static void main(String[] args) {
+        int number;
+        int rem = 0, rev = 0;
+        Scanner obj = new Scanner(System.in);
+        try {
+            System.out.print("Enter the number to be reversed :");
+            number = obj.nextInt();
+            if(number>0){
+            while (number > 0) {
+               rem = number % 10;
+               rev = (rev*10 )+ rem;
+               number = number / 10;
+            } 
+            System.out.print("Reversed Number :" + rev);
+        } else{
+            System.out.println("Invalid Input...");
+        }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input...");
+        }
+        
+    }
+}
