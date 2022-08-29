@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class posneg {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        try {
+            System.out.println("Enter the no of numbers :");
+            int n = obj.nextInt();
+            float pos = 0, neg = 0, totp = 0, totn = 0;
+            float avgp = 0.0f, avgn = 0.0f;
+            for (int i = 1; i <= n; i++) {
+                System.out.println("Enter the number :" + i);
+                int n1 = obj.nextInt();
+                if (n1 >= 0) {
+                    pos = pos + 1;
+                    totp = totp + n1;
+                } else {
+                    neg = neg + 1;
+                    totn = totn + n1;
+                }
+            }
+            avgp = totp / pos;
+            avgn = totn / neg;
+            System.out.println("Total no of positive numbers :" + pos);
+            System.out.println("Total no of negative numbers :" + neg);
+            System.out.println("Average of positive numbers: " + avgp);
+            System.out.println("Average of negative numbers: " + avgn);
+            obj.close();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input....");
+        }
+
+    }
+}
