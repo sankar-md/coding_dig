@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class table {
+    public static void main(String[] args) {
+        {
+            Scanner obj = new Scanner(System.in);
+            try {
+                System.out.println("Enter the table n :");
+                int n = obj.nextInt();
+                System.out.println("Enter the range needed m :");
+                int m = obj.nextInt();
+                if (n > 0 && m > 0) {
+                    System.out.println("........Table........\n");
+                    for (int i = 1; i <= m; i++) {
+                        System.out.println(n + "X" + i + "=" + n * i);
+                    }
+                } else {
+                    System.out.println("Invlaid Input....");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid Input....");
+            }
+
+        }
+    }
+}
