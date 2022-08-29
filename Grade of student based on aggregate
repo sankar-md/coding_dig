@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class rank {
+    public static void main(String[] args) {
+        int m1, m2, m3, m4;
+        Scanner obj = new Scanner(System.in);
+        try {
+            System.out.println("Enter the marks :");
+            m1 = obj.nextInt();
+            m2 = obj.nextInt();
+            m3 = obj.nextInt();
+            m4 = obj.nextInt();
+            int total = (m1 + m2 + m3 + m4);
+            int aggregate = total / 4;
+            if (aggregate >= 75 && aggregate <= 100) {
+                System.out.println("Distinction....");
+            } else if (aggregate >= 65 && aggregate < 75) {
+                System.out.println("First Class....");
+            } else if (aggregate < 65 && aggregate >= 50) {
+                System.out.println("Second Class....");
+            } else if (aggregate >= 0 && aggregate < 50) {
+                System.out.println("Fail....");
+            } else {
+                System.out.println("Invalid Input....");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid Input.....");
+        }
+        obj.close();
+
+    }
+}
