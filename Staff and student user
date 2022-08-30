@@ -1,0 +1,33 @@
+import java.util.*;
+public class stufac{
+	public static void main(String args[])
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the total no of Student user :");
+		int stu=s.nextInt();
+		float stud=stu,non_staff1,chk2=stud/15;
+		int chk1=stu/15,staff,non_staff2;
+		if(chk1==chk2)
+		{
+			staff=chk1;
+		}
+		else
+		{
+			staff=chk1+1;
+		}
+		System.out.println("Staff user :"+staff);
+		float staff1=staff;
+		non_staff1=staff1/3;
+		non_staff2=staff/3;
+		if(non_staff2==non_staff1)
+		{
+			System.out.println("Non teaching Staff :"+non_staff2);
+		}
+		else
+		{
+			int n=non_staff2+1;
+			System.out.println("Non teaching Staff :"+n);
+		}
+		
+	} 
+}
