@@ -1,0 +1,36 @@
+
+import java.util.*;
+public class deno{
+public static void main()
+{
+Scanner obj=new Scanner(System.in);
+int tot_user,stu_user,staff_user,non_staff;
+try{
+system.out.println("Enter total no of user :");
+tot_user=obj.nextInt();
+System.out.println("Enter no of staff user :");
+staff_user=obj.nextInt();
+if(tot_user>0 && staff_user>0){
+	if{
+		non_staff=staff_user/3;
+		stu_user=tot_user-staff_user-non_staff;
+		System.out.println("Total user :"+tot_user);
+
+		System.out.println("Staff user :"+staff_user);
+		System.out.println("Non Staff user :"+non_staff);
+		System.out.println("Student user :"+stu_user);
+	}
+	else{	
+		System.out.println("Invalid Input....\n ...the total user value should not less than staff user....");
+	}
+}
+else{
+	System.out.println("Invalid input....");
+}
+}
+catch(InputMismatchException e)
+{
+System.out.println("Invalid Input....");
+}
+}
+}
