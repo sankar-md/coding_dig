@@ -1,0 +1,22 @@
+import java.util.*;
+public class vowels{
+public static void main(String args[]){
+String s;
+Scanner obj=new Scanner(System.in);
+System.out.print("enter the string : ");
+s=obj.nextLine();
+int v=0;
+for(int i=0;i<s.length();i++){
+if(s.charAt(i)=='A' || s.charAt(i)=='E' || s.charAt(i)=='I' || s.charAt(i)=='O' || s.charAt(i)=='U'){
+v++;
+}
+else if(s.charAt(i)=='a' || s.charAt(i)=='e' || s.charAt(i)=='i' || s.charAt(i)=='o' || s.charAt(i)=='u'){
+v++;
+}
+else{
+continue;
+}
+}
+System.out.print("no of vowels in a string : "+v);
+}
+}
