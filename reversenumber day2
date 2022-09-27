@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class revnum{
+	public static void main(String args[]){
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter a number :");
+		try{
+			int num=obj.nextInt(),rem,rev=0;
+			while(num>0){
+				rem=num%10;
+				rev=rev*10+rem;
+				num=num/10;
+			}
+			System.out.println("The reversed number is :"+rev);
+		}
+		catch(InputMismatchException e){
+			System.out.println("Invalid Input....");
+		}
+	}
+}
